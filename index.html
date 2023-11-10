@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <title>Saludo con cambio de nombre</title>
+    
+    <style>
+
+        body {
+            padding: 20px;
+        }
+
+    </style>
+</head>
+<body class="bg-dark">
+
+<div class="container text-light mt-5 text-center" >
+    <div class="row">
+        <h1 id="saludo">Hola Extrañ@</h1>
+    </div>
+    <button class="btn btn-primary" onclick="cambiarNombre()">Cambiar el Nombre</button>
+</div>
+
+<script>
+    function cambiarNombre() {
+        // Usar la función prompt para obtener el nombre del usuario
+        let nuevoNombre = prompt("¿Cuál es tu nombre?");
+        
+        // Verificar si el usuario ingresó un nombre
+        if (nuevoNombre !== null && nuevoNombre !== "") {
+            // Actualizar el texto del saludo con el nuevo nombre
+            document.getElementById("saludo").innerText = "Hola " + nuevoNombre;
+        } else {
+            // Si el usuario no ingresó un nombre, mostrar un mensaje
+            alert("Debes ingresar un nombre válido.");
+        }
+    }
+</script>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+</body>
+</html>
